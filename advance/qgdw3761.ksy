@@ -81,11 +81,11 @@ instances:
   has_pw:
     value: afn == 1 or afn == 4 or afn == 5 or afn == 6 or afn == 15 or afn == 16 ? true:false
   fir:
-    value: seq & 0x80 > 0 ? 1:0
+    value: seq & 0x40 > 0 ? 1:0
   fin:
-    value: seq & 0x80 > 0 ? 1:0
+    value: seq & 0x20 > 0 ? 1:0
   con:
-    value: seq & 0x80 > 0 ? 1:0
+    value: seq & 0x10 > 0 ? 1:0
   pesq_rseq:
     value: seq & 0xf
 types:
