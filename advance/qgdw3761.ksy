@@ -16,7 +16,7 @@ seq:
   - id: c
     type: u1
   - id: a1
-    size: 2
+    type: u2
   - id: a2
     type: u2
   - id: a3
@@ -79,7 +79,7 @@ instances:
   has_ec:
     value: acd == 1 ? true:false
   has_pw:
-    value: afn == 1 or afn == 4 or afn == 5 or afn == 6 or afn == 15 or afn == 16 ? true:false
+    value: (dir == dir::down) and (afn == 1 or afn == 4 or afn == 5 or afn == 6 or afn == 15 or afn == 16) ? true:false
   fir:
     value: seq & 0x40 > 0 ? 1:0
   fin:
