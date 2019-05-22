@@ -16,7 +16,7 @@ seq:
   - id: c
     type: u1
   - id: a1
-    type: u2
+    type: bcd(4,4,false)
   - id: a2
     type: u2
   - id: a3

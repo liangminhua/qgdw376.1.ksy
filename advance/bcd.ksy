@@ -54,25 +54,25 @@ instances:
     value: 'is_le ? as_int_le : as_int_be'
   as_int_le:
     value: >
-      digits[0] +
+      digits[1] +
       (num_digits < 2 ? 0 :
-       (digits[1] * 10 +
+       (digits[0] * 10 +
         (num_digits < 3 ? 0 :
-         (digits[2] * 100 +
+         (digits[3] * 100 +
           (num_digits < 4 ? 0 :
-           (digits[3] * 1000 +
+           (digits[2] * 1000 +
             (num_digits < 5 ? 0 :
-             (digits[4] * 10000 +
+             (digits[5] * 10000 +
               (num_digits < 6 ? 0 :
-               (digits[5] * 100000 +
+               (digits[4] * 100000 +
                 (num_digits < 7 ? 0 :
-                 (digits[6] * 1000000 +
+                 (digits[7] * 1000000 +
                   (num_digits < 8 ? 0 :
-                   (digits[7] * 10000000 +
+                   (digits[6] * 10000000 +
                     (num_digits < 9 ? 0 :
-                     (digits[8] * 100000000 +
+                     (digits[9] * 100000000 +
                       (num_digits < 10 ? 0 :
-                       (digits[9] * 1000000000)
+                       (digits[8] * 1000000000)
                       )
                      )
                     )

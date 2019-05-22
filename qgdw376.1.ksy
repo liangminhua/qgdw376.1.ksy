@@ -13,7 +13,7 @@ seq:
     contents: [0x68]
   - id: c
     type: u1
-  - id: a1
+  - id: a1_raw
     type: u2
   - id: a2
     type: u2
@@ -39,6 +39,8 @@ seq:
   - id: end_sign
     contents: [0x16]
 instances:
+  a1:
+    value: (a1_raw & 0xf)+(a1_raw >> 4 & 0xf) * 10+(a1_raw >> 8 & 0xf) * 100+(a1_raw >> 12 & 0xf) * 1000
   user_data_length:
     value: l >> 2
   protocal_identification:
